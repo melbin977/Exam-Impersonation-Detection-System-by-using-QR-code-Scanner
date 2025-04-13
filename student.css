@@ -1,0 +1,319 @@
+/* Inherit common styles */
+@import url('style.css');
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.dashboard-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exam-selection h2, .exam-details h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group select, .form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.exam-details {
+    margin-top: 2rem;
+}
+
+.details-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+    margin-bottom: 2rem;
+}
+
+.details-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.details-card p {
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.aadhar-verification h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Add these styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn.secondary {
+    background-color: #95a5a6;
+    margin-top: 0.5rem;
+}
+
+.btn.secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn.secondary {
+    background-color: #95a5a6;
+    margin-top: 0.5rem;
+}
+
+.btn.secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.registered-exams {
+    margin-top: 30px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.registered-exams h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.registered-exam-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registered-exam-card h3 {
+    margin: 0 0 5px 0;
+    color: #3498db;
+}
+
+.registered-exam-card .exam-meta {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+.view-ticket-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view-ticket-btn:hover {
+    background: #2980b9;
+}
+
+
+.registered-exams {
+    margin-top: 40px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.registered-exams h2 {
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+.registered-exam-card {
+    background: #f8fafc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.registered-exam-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.registered-exam-card h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.exam-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.exam-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.exam-meta-item i {
+    color: #3498db;
+    font-size: 1.1rem;
+}
+
+.exam-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.view-ticket-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.view-ticket-btn:hover {
+    background: #2980b9;
+}
+
+.view-ticket-btn i {
+    font-size: 1rem;
+}
+
+.no-exams {
+    text-align: center;
+    padding: 30px;
+    color: #718096;
+    font-style: italic;
+    background: #f8fafc;
+    border-radius: 8px;
+}

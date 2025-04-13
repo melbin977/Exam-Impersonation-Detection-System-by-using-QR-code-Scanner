@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Attendance</title>
+    <link rel="stylesheet" href="css/attendance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/instascan/1.0.0/instascan.min.js"></script>
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SEAP Attendance</div>
+            <div class="nav-links">
+                <a href="examiner.html"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="attendance-container">
+            <div class="exam-info">
+                <h2 id="examTitle">Exam Title</h2>
+                <div class="exam-meta" id="examMeta">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="scanner-section">
+                <h3><i class="fas fa-qrcode"></i> QR Code Scanner</h3>
+                <div class="scanner-box">
+                    <video id="scanner" width="100%"></video>
+                    <div class="scanner-overlay"></div>
+                </div>
+                <button id="startScanner" class="btn primary">
+                    <i class="fas fa-play"></i> Start Scanner
+                </button>
+            </div>
+            
+            <div class="attendance-list">
+                <h3><i class="fas fa-users"></i> Attendance Record</h3>
+                <div class="students-list" id="studentsList">
+                    <!-- Will be populated by JavaScript -->
+                    <div class="empty-state">
+                        <i class="fas fa-user-clock"></i>
+                        <p>No attendance recorded yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/attendance.js"></script>
+</body>
+</html>

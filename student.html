@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAP - Student Dashboard</title>
+    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">SEAP</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Student Dashboard</h1>
+
+        <div class="dashboard-container">
+            <div class="exam-selection">
+                <h2>Select Exam</h2>
+                <div class="form-group">
+                    <select id="examSelect">
+                        <option value="">-- Select Exam --</option>
+                        <option value="midterm">Midterm Examination</option>
+                        <option value="final">Final Examination</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Add this after the exam selection dropdown -->
+            <div class="registered-exams">
+                <h2>Your Registered Exams</h2>
+                <div class="exams-list" id="registeredExamsList">
+                    <!-- Will be populated by JavaScript -->
+                    <div class="no-exams">No registered exams found</div>
+                </div>
+            </div>
+
+            <div class="exam-details hidden" id="examDetails">
+                <h2>Exam Details</h2>
+                <div class="details-card">
+                    <h3 id="examTitle">Exam Title</h3>
+                    <p><strong>Institute:</strong> <span id="instituteName">Not selected</span></p>
+                    <p><strong>Date:</strong> <span id="examDate">Not selected</span></p>
+                    <p><strong>Time:</strong> <span id="examTime">Not selected</span></p>
+                    <p><strong>Last Registration Date:</strong> <span id="lastRegDate">Not selected</span></p>
+                </div>
+
+                <div class="aadhar-verification">
+                    <h3>Aadhar Verification</h3>
+                    <form id="aadharForm">
+                        <div class="form-group">
+                            <label for="aadharNumber">Aadhar Number</label>
+                            <input type="text" id="aadharNumber" pattern="[0-9]{12}" title="12-digit Aadhar number"
+                                required>
+                        </div>
+                        <button type="submit" class="btn">Verify & Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="otpModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>OTP Verification</h2>
+            <p>We've sent a 6-digit OTP to your registered email. Please enter it below:</p>
+            <form id="otpForm">
+                <div class="form-group">
+                    <label for="otpInput">OTP</label>
+                    <input type="text" id="otpInput" maxlength="6" required>
+                </div>
+                <button type="submit" class="btn">Verify OTP</button>
+                <button type="button" id="resendOtp" class="btn secondary">Resend OTP</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/student.js"></script>
+</body>
+
+</html>

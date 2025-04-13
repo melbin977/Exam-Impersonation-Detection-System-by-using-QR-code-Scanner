@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Registration Confirmation</title>
+    <link rel="stylesheet" href="css/confirmation.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="confirmation-container" id="hallTicket">
+        <header>
+            <h1>Exam Hall Ticket</h1>
+            <div class="ticket-id">Ticket ID: <span id="ticketId"></span></div>
+        </header>
+        
+        <div class="student-info">
+            <h2>Student Information</h2>
+            <div class="info-grid">
+                <div>Name: <span id="studentName"></span></div>
+                <div>Email: <span id="studentEmail"></span></div>
+                <div>Aadhar: <span id="studentAadhar"></span></div>
+            </div>
+        </div>
+        
+        <div class="exam-info">
+            <h2>Exam Details</h2>
+            <div class="info-grid">
+                <div>Exam Name: <span id="examName"></span></div>
+                <div>Institute: <span id="instituteName"></span></div>
+                <div>Date: <span id="examDate"></span></div>
+                <div>Time: <span id="examTime"></span></div>
+                <div>Venue: <span id="examVenue"></span></div>
+            </div>
+        </div>
+        
+        <div class="qr-container">
+            <h2>QR Code Verification</h2>
+            <div id="qrCode"></div>
+            <p>Scan this code at exam center for verification</p>
+        </div>
+        
+        <div class="instructions">
+            <h2>Important Instructions</h2>
+            <ul>
+                <li>Bring this hall ticket and original Aadhar card</li>
+                <li>Arrive at least 30 minutes before exam time</li>
+                <li>No electronic devices allowed</li>
+                <li>Follow all COVID-19 safety protocols</li>
+            </ul>
+        </div>
+        
+        <div class="actions">
+            <button id="downloadBtn" class="btn">Download Hall Ticket</button>
+            <button id="homeBtn" class="btn secondary">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="js/confirmation.js"></script>
+</body>
+</html>

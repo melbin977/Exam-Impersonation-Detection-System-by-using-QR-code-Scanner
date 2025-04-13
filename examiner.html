@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examiner Dashboard</title>
+    <link rel="stylesheet" href="css/examiner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SEAP Examiner</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="exam-creation">
+            <div class="info-card">
+                <h2><i class="fas fa-lightbulb"></i> Exam Creation Guide</h2>
+                <ol>
+                    <li>Click "Create New Exam" to set up a new examination</li>
+                    <li>Fill in all required details including exam dates</li>
+                    <li>Students will register using their Aadhar details</li>
+                    <li>Use the attendance system during exam day</li>
+                </ol>
+                <button id="addExamBtn" class="btn primary">
+                    <i class="fas fa-plus"></i> Create New Exam
+                </button>
+            </div>
+
+            <div class="exam-form hidden" id="examForm">
+                <form id="newExamForm">
+                    <h3>New Exam Details</h3>
+                    <div class="form-group">
+                        <label for="examTitle">Exam Title</label>
+                        <input type="text" id="examTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="instituteName">Institute Name</label>
+                        <input type="text" id="instituteName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="examDate">Exam Date</label>
+                        <input type="date" id="examDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="examTime">Exam Time</label>
+                        <input type="time" id="examTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="examVenue">Exam Venue</label>
+                        <input type="text" id="examVenue">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastRegDate">Last Registration Date</label>
+                        <input type="date" id="lastRegDate" required>
+                    </div>
+                    <button type="submit" class="btn primary">Create Exam</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="previous-exams">
+            <h2><i class="fas fa-history"></i> Your Previous Exams</h2>
+            <div class="exams-list" id="examsList">
+                <!-- Exams will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/examiner.js"></script>
+</body>
+</html>
